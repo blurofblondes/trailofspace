@@ -7,7 +7,6 @@ package citbyui.cit260.curiousworkmanship.control;
 
 import byui.cit260.curiousWorkmanship.model.Player;
 import trailofspace.TrailofSpace;
-import trailofspace.TrailofSpace.CuriousWorkmanship;
 
 
 /**

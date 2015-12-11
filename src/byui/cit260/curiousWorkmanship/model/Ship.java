@@ -5,20 +5,21 @@
  */
 package byui.cit260.curiousWorkmanship.model;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
  *
  * @author Travis
  */
-public class ship implements Serializable {
+public class Ship implements Serializable {
     
     private String exit;
     private String reEnter;
     private String upgrade;
     private String shipStats; 
 
-    public ship() {
+    public Ship() {
     }
 
     public String getExit() {
@@ -76,7 +77,7 @@ public class ship implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final ship other = (ship) obj;
+        final Ship other = (Ship) obj;
         if (!Objects.equals(this.exit, other.exit)) {
             return false;
         }

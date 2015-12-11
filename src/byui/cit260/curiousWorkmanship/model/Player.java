@@ -5,6 +5,7 @@
  */
 package byui.cit260.curiousWorkmanship.model;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
@@ -16,7 +17,12 @@ public class Player implements Serializable {
     // classes instance variables
     private String name;
     private double bestTime;
+    private Characters character;
+    private double health;
+    private Armor armor;
 
+    
+    
     public Player() {
     }
     
@@ -35,6 +41,31 @@ public class Player implements Serializable {
 
     public void setBestTime(double bestTime) {
         this.bestTime = bestTime;
+    }
+
+    public Characters getCharacter() {
+        return character;
+    }
+
+    public void setCharacter(Characters character) {
+        this.character = character;
+    }
+
+
+    public double getHealth() {
+        return health;
+    }
+
+    public void setHealth(double health) {
+        this.health = health;
+    }
+
+    public Armor getArmor() {
+        return armor;
+    }
+
+    public void setArmor(Armor armor) {
+        this.armor = armor;
     }
     
     // end setter and getter code

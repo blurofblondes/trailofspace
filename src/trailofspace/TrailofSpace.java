@@ -8,7 +8,7 @@ package trailofspace;
 
 import byui.cit260.curiousWorkmanship.model.Player;
 import citbyui.cit260.TrailofSpace.view.startProgramView;
-import citbyui.cit260.curiousworkmanship.control.Game;
+import citbyui.cit260.curiousworkmanship.control.GameControl;
 import java.io.Serializable;
 
 
@@ -21,7 +21,7 @@ import java.io.Serializable;
  */
 public class TrailofSpace {
     private static Player player;
-    private static Game currentGame;
+    private static GameControl currentGame;
 
     /**
      * @param args

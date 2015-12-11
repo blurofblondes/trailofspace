@@ -5,18 +5,23 @@
  */
 package byui.cit260.curiousWorkmanship.model;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
  *
  * @author Travis
  */
-public class game implements Serializable{
+public class Game implements Serializable{
     
-    private String characterName;
-    private String weapons;
+    private Player player;
+    private Characters characters;
+    private Map map;
+    private Ship ship;
 
-    public game() {
+    
+
+    public Game() {
     }
 
     public String getCharacterName() {
@@ -56,7 +61,7 @@ public class game implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final game other = (game) obj;
+        final Game other = (Game) obj;
         if (!Objects.equals(this.characterName, other.characterName)) {
             return false;
         }

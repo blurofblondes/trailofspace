@@ -5,16 +5,18 @@
  */
 package byui.cit260.curiousWorkmanship.model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Travis
  */
-public class battle implements Serializable{
+public class Battle implements Serializable{
     
     private double attack;
     private double defend;
 
-    public battle() {
+    public Battle() {
     }
 
     public double getAttack() {
@@ -54,7 +56,7 @@ public class battle implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final battle other = (battle) obj;
+        final Battle other = (Battle) obj;
         if (Double.doubleToLongBits(this.attack) != Double.doubleToLongBits(other.attack)) {
             return false;
         }

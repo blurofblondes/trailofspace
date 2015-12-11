@@ -5,19 +5,22 @@
  */
 package byui.cit260.curiousWorkmanship.model;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
  *
  * @author Travis
  */
-public class location implements Serializable{
+public class Location implements Serializable{
     
     private double row;
     private double column;
     private String visited; 
+    private Battle battle;
+    private Scene scene;
 
-    public location() {
+    public Location() {
     }
 
     public double getRow() {
@@ -44,6 +47,22 @@ public class location implements Serializable{
         this.visited = visited;
     }
 
+    public Battle getBattle() {
+        return battle;
+    }
+
+    public void setBattle(Battle battle) {
+        this.battle = battle;
+    }
+
+    public Scene getScene() {
+        return scene;
+    }
+
+    public void setScene(Scene scene) {
+        this.scene = scene;
+    }
+
     @Override
     public String toString() {
         return "location{" + "row=" + row + ", column=" + column + ", visited=" + visited + '}';
@@ -65,7 +84,7 @@ public class location implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final location other = (location) obj;
+        final Location other = (Location) obj;
         if (Double.doubleToLongBits(this.row) != Double.doubleToLongBits(other.row)) {
             return false;
         }

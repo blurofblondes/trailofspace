@@ -6,13 +6,14 @@
 package byui.cit260.curiousWorkmanship.model;
 
 import java.awt.Point;
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
  *
  * @author Travis
  */
-public enum characters implements Serializable {
+public enum Characters implements Serializable {
 
     Player("This is the space venturer who is fighting space aliens to return home.", "Kyle"),
     EnemyOne("This is the first space alien you must defeat to continue on.", "Quinn"),
@@ -24,7 +25,7 @@ public enum characters implements Serializable {
     private final Point coordinates;
     private final String characterName;
 
-    characters(String description, String characterName) {
+    Characters(String description, String characterName) {
         this.description = description;
         coordinates = new Point(1, 1);
         this.characterName = characterName;

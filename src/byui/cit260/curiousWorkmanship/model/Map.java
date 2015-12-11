@@ -5,19 +5,20 @@
  */
 package byui.cit260.curiousWorkmanship.model;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
  *
  * @author Travis
  */
-public class map implements Serializable{
+public class Map implements Serializable{
     
     private String rowCount;
     private String columnCount;
     private String locationsVisited;
 
-    public map() {
+    public Map() {
     }
 
     public String getRowCount() {
@@ -66,7 +67,7 @@ public class map implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final map other = (map) obj;
+        final Map other = (Map) obj;
         if (!Objects.equals(this.rowCount, other.rowCount)) {
             return false;
         }

@@ -24,32 +24,45 @@ public class Game implements Serializable{
     public Game() {
     }
 
-    public String getCharacterName() {
-        return characterName;
+    public Player getPlayer() {
+        return player;
     }
 
-    public void setCharacterName(String characterName) {
-        this.characterName = characterName;
+    public void setPlayer(Player player) {
+        this.player = player;
     }
 
-    public String getWeapons() {
-        return weapons;
+    public Characters getCharacters() {
+        return characters;
     }
 
-    public void setWeapons(String weapons) {
-        this.weapons = weapons;
+    public void setCharacters(Characters characters) {
+        this.characters = characters;
     }
 
-    @Override
-    public String toString() {
-        return "game{" + "characterName=" + characterName + ", weapons=" + weapons + '}';
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
+    }
+
+    public Ship getShip() {
+        return ship;
+    }
+
+    public void setShip(Ship ship) {
+        this.ship = ship;
     }
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 17 * hash + Objects.hashCode(this.characterName);
-        hash = 17 * hash + Objects.hashCode(this.weapons);
+        int hash = 5;
+        hash = 23 * hash + Objects.hashCode(this.player);
+        hash = 23 * hash + Objects.hashCode(this.characters);
+        hash = 23 * hash + Objects.hashCode(this.map);
+        hash = 23 * hash + Objects.hashCode(this.ship);
         return hash;
     }
 
@@ -62,15 +75,25 @@ public class Game implements Serializable{
             return false;
         }
         final Game other = (Game) obj;
-        if (!Objects.equals(this.characterName, other.characterName)) {
+        if (!Objects.equals(this.player, other.player)) {
             return false;
         }
-        if (!Objects.equals(this.weapons, other.weapons)) {
+        if (this.characters != other.characters) {
+            return false;
+        }
+        if (!Objects.equals(this.map, other.map)) {
+            return false;
+        }
+        if (!Objects.equals(this.ship, other.ship)) {
             return false;
         }
         return true;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "Game{" + "player=" + player + ", characters=" + characters + ", map=" + map + ", ship=" + ship + '}';
+    }
+
     
 }

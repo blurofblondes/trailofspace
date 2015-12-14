@@ -5,7 +5,9 @@
  */
 package citbyui.cit260.TrailofSpace.view;
 
+import citbyui.cit260.curiousworkmanship.control.GameControl;
 import java.util.Scanner;
+import trailofspace.TrailofSpace;
 
 /**
  *
@@ -51,7 +53,7 @@ public class MainMenuView extends View {
     }
 
     private void newGame() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        GameControl.createNewGame(TrailofSpace.getPlayer());
     }
 
     private void loadGame() {
